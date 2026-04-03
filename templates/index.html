@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <div class="container">
+        <h1 class="section-title">01. About Me</h1>
+
+        <p class="about-text">
+            I'm a results-driven <span>Python Backend Engineer</span> with over 2+ years 
+            of experience in building scalable fintech systems.
+        </p>
+
+        <p class="about-text">
+            Expert in FastAPI, PostgreSQL, Redis and async systems. Built production-grade APIs 
+            and handled real-time client issues.
+        </p>
+
+        <p class="about-text">
+            Passionate about building robust systems and exploring AI integrations in backend applications.
+        </p>
+
+        <div class="stats">
+            <div>
+                <h2>2+</h2>
+                <p>Years Experience</p>
+            </div>
+            <div>
+                <h2>4+</h2>
+                <p>Projects Built</p>
+            </div>
+            <!-- <div>
+                <h2>5+</h2>
+                <p>APIs Deployed</p>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+    <div class="container">
+        <h1 class="section-title">02. Experience</h1>
+
+        {% for exp in data.experience %}
+        <div class="exp-card">
+            <h3>{{ exp.role }} - <span>{{ exp.company }}</span></h3>
+            <ul>
+                {% for d in exp.description %}
+                <li>{{ d }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+    <div class="container">
+        <h1 class="section-title">03. Skills & Technologies</h1>
+
+        <div class="skills-grid">
+
+            <!-- Languages -->
+            <div class="card">
+                <h3>Languages</h3>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="card">
+                <h3>Backend</h3>
+                <div class="tags">
+                    <span>FastAPI</span>
+                    <span>Django</span>
+                    <span>REST APIs</span>
+                    <span>SQLAlchemy</span>
+                    <span>Celery</span>
+                    <span>Redis</span>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="card">
+                <h3>Databases</h3>
+                <div class="tags">
+                    <span>PostgreSQL</span>
+                    <span>MySQL</span>
+                    <span>SQLite</span>
+                </div>
+            </div>
+
+            <!-- DevOps & Tools -->
+            <div class="card">
+                <h3>DevOps & Tools</h3>
+                <div class="tags">
+                    <span>AWS</span>
+                    <span>Nginx</span>
+                    <span>Systemd</span>
+                    <span>Docker</span>
+                </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="card">
+                <h3>Frontend</h3>
+                <div class="tags">
+                    <span>React.js</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+            </div>
+
+            <!-- AI Tools -->
+            <div class="card">
+                <h3>AI Assisted Development</h3>
+                <div class="tags">
+                    <span>Cursor</span>
+                    <span>Claude</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <div class="container contact-section">
+        <h1 class="section-title">04. Get In Touch</h1>
+
+        <p class="contact-text">
+            I'm currently open to opportunities and collaborations.  
+            Feel free to reach out — I'd love to connect!
+        </p>
+
+        <div class="contact-links">
+            <a href="mailto:your-chandanaraj2001@gmail.com" class="contact-btn">📧 Email</a>
+            <a href="https://linkedin.com/in/chandana-t-51b0531a2" target="_blank" class="contact-btn">💼 LinkedIn</a>
+            <a href="https://github.com/ChandanaT-hub" target="_blank" class="contact-btn">💻 GitHub</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
