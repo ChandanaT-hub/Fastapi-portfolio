@@ -23,4 +23,3 @@ A personal portfolio website built using FastAPI to showcase my experience, skil
 
 ---
 
-## 📂 Project Structure
